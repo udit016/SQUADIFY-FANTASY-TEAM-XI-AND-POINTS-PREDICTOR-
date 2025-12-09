@@ -1,0 +1,219 @@
+{
+  "batting": {
+    "direct": [
+      {
+        "name": "Run",
+        "column": "runs_batting",
+        "points_per_unit": 1
+      },
+      {
+        "name": "Boundary Bonus",
+        "column": "fours",
+        "points_per_unit": 4
+      },
+      {
+        "name": "Six Bonus",
+        "column": "sixes",
+        "points_per_unit": 6
+      }
+    ],
+    "milestones": [
+      {
+        "name": "Century Bonus",
+        "column": "runs_batting",
+        "min": 100,
+        "max": null,
+        "points": 16
+      },
+      {
+        "name": "75 Run Bonus",
+        "column": "runs_batting",
+        "min": 75,
+        "max": 99,
+        "points": 12
+      },
+      {
+        "name": "Half-Century Bonus",
+        "column": "runs_batting",
+        "min": 50,
+        "max": 74,
+        "points": 8
+      },
+      {
+        "name": "25 Run Bonus",
+        "column": "runs_batting",
+        "min": 25,
+        "max": 49,
+        "points": 4
+      }
+    ],
+    "strike_rate": {
+      "column_sr": "strike_rate_batting",
+      "column_balls": "balls_faced",
+      "min_balls": 10,
+      "ranges": [
+        {
+          "min": 170.01,
+          "max": null,
+          "points": 6
+        },
+        {
+          "min": 150.01,
+          "max": 170.0,
+          "points": 4
+        },
+        {
+          "min": 130.0,
+          "max": 150.0,
+          "points": 2
+        },
+        {
+          "min": 60.0,
+          "max": 70.0,
+          "points": -2
+        },
+        {
+          "min": 50.0,
+          "max": 59.99,
+          "points": -4
+        },
+        {
+          "min": null,
+          "max": 50.0,
+          "points": -6
+        }
+      ],
+      "negative_points_below_sr": 70
+    },
+    "duck": {
+      "column_runs": "runs_batting",
+      "column_out": "out",
+      "condition_runs": 0,
+      "condition_out": true,
+      "points": -2,
+      "player_types": [
+        "Batter",
+        "Wicket-Keeper",
+        "All-Rounder"
+      ]
+    },
+    "special_rules": {
+      "century_overrides_lower_bonuses": true
+    }
+  },
+  "bowling": {
+    "direct": [
+      {
+        "name": "Maiden Over",
+        "column": "maidens",
+        "points_per_unit": 12
+      },
+      {
+        "name": "Wicket",
+        "column": "wickets_taken",
+        "points_per_unit": 30
+      },
+      {
+        "name": "Dot Ball",
+        "column": "dot_balls_bowled",
+        "points_per_unit": 1
+      },
+      {
+        "name": "Bonus (LBW/Bowled)",
+        "column": "bowled_lbw_dismissals",
+        "points_per_unit": 8
+      }
+    ],
+    "wicket_bonuses": [
+      {
+        "name": "3 Wicket Bonus",
+        "column": "wickets_taken",
+        "min": 3,
+        "max": 3,
+        "points": 4
+      },
+      {
+        "name": "4 Wicket Bonus",
+        "column": "wickets_taken",
+        "min": 4,
+        "max": 4,
+        "points": 8
+      },
+      {
+        "name": "5 Wicket Bonus",
+        "column": "wickets_taken",
+        "min": 5,
+        "max": null,
+        "points": 12
+      }
+    ],
+    "economy_rate": {
+      "columns": {
+        "overs_bowled": "overs_bowled",
+        "runs_conceded": "runs_conceded",
+        "economy_rate": "economy_rate"
+      },
+      "min_overs": 2.0,
+      "ranges": [
+        {
+          "min": null,
+          "max": 5.0,
+          "points": 6
+        },
+        {
+          "min": 5.0,
+          "max": 5.99,
+          "points": 4
+        },
+        {
+          "min": 6.0,
+          "max": 7.0,
+          "points": 2
+        },
+        {
+          "min": 10.0,
+          "max": 11.0,
+          "points": -2
+        },
+        {
+          "min": 11.01,
+          "max": 12.0,
+          "points": -4
+        },
+        {
+          "min": 12.01,
+          "max": null,
+          "points": -6
+        }
+      ]
+    },
+    "special_rules": {
+      "wicket_bonus_highest_only": true
+    }
+  },
+  "fielding": {
+    "direct": [
+      {
+        "name": "Catch",
+        "column": "catches_taken",
+        "points_per_unit": 8
+      },
+      {
+        "name": "Stumping",
+        "column": "stumpings_made",
+        "points_per_unit": 12
+      },
+      {
+        "name": "Run out (Direct hit)",
+        "column": "run_outs",
+        "points_per_unit": 12
+      }
+    ],
+    "catch_bonus": {
+      "column": "catches_taken",
+      "min_catches": 3,
+      "points": 4,
+      "notes": "If a player takes 3 or more catches, they get 4 bonus points total (not per catch)."
+    }
+  }
+}

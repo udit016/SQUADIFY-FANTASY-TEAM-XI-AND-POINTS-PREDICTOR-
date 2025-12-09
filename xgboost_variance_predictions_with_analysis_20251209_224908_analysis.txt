@@ -1,0 +1,18 @@
+XGBoost Variance Fantasy Cricket Prediction Analysis
+============================================================
+
+total_players: 37
+avg_prediction: 46.075904846191406
+prediction_range: (22.198646545410156, 85.24589538574219)
+prediction_std: 14.636161804199219
+unique_predictions: 35
+prediction_variety: 0.9459459459459459
+model_type: XGBoost Variance Model with 30-Feature System
+variance_maintained: True
+variance_quality: Moderate
+prediction_range_span: 63.04724884033203
+range_quality: Good
+team_breakdown: {1: {'mean': 44.0814094543457, 'std': 15.527706146240234, 'count': 17}, 2: {'mean': 47.77123260498047, 'std': 14.009315490722656, 'count': 20}}
+role_breakdown: {'All-rounder': {'mean': 42.234962463378906, 'std': 13.610994338989258, 'count': 8}, 'Batter': {'mean': 35.80192947387695, 'std': 10.716787338256836, 'count': 6}, 'Bowler': {'mean': 47.16349411010742, 'std': 10.340279579162598, 'count': 12}, 'Middle-order': {'mean': 51.202388763427734, 'std': nan, 'count': 1}, 'Top-order': {'mean': 58.21785354614258, 'std': 24.02723503112793, 'count': 5}, 'Wicketkeeper-batsman': {'mean': 48.77275848388672, 'std': 14.054065704345703, 'count': 5}}
+xgboost_metrics: {'avoiding_average_trap': True, 'prediction_diversity_score': 0.9459459459459459, 'variance_score': 0.5854464721679687, 'feature_utilization': '30-feature context system'}
+performance_tiers: {'high_variance': 6, 'above_average': 9, 'average': 7, 'below_average': 9, 'low_variance': 6}

@@ -1,0 +1,12 @@
+player_id,predicted_fantasy_points,fp_pred,team_id,role,name,prediction_confidence,credits,predicted_rank,percentile,variance_category,starting_probability,role_std,captain_score,captain,vice_captain
+253802,76.57051,76.57051,2,Top-order, V Kohli             ,0.7938953,11.91891891891892,2,97.2972972972973,High Variance,1.0,Batter,60.788969015561634,True,False
+605661,64.30648,64.30648,1,Wicketkeeper-batsman, RD Rickelton        ,0.7694082,12.256756756756758,4,91.89189189189189,High Variance,1.0,Wicketkeeper,49.477935011651425,False,True
+1119026,62.169106,62.169106,2,Top-order, D Padikkal          ,0.7600675,11.594594594594595,6,86.48648648648648,Above Average,1.0,Batter,47.25271801766803,False,False
+34102,85.245895,85.245895,1,Top-order, RG Sharma           ,0.7981144,12.0,1,100.0,High Variance,0.6666666666666666,Batter,45.35731884434426,False,False
+471342,53.307503,53.307503,2,All-rounder, KH Pandya           ,0.69149154,11.97027027027027,10,75.67567567567568,Above Average,1.0,Allrounder,36.8616873941678,False,False
+1350792,66.21235,66.21235,2,Bowler, Suyash Sharma       ,0.7760015,11.737837837837839,3,94.5945945945946,High Variance,0.6666666666666666,Bowler,34.25392197029851,False,False
+892749,51.20239,51.20239,2,Middle-order, TH David            ,0.6673215,11.027027027027028,13,67.56756756756756,Average,1.0,Batter,34.16845503511536,False,False
+669365,50.817554,50.817554,2,Wicketkeeper-batsman, PD Salt             ,0.6626181,11.364864864864865,15,62.16216216216216,Average,1.0,Wicketkeeper,33.67263142481056,False,False
+288284,49.74638,49.74638,2,Bowler, JR Hazlewood        ,0.6491306,10.562162162162162,17,56.75675675675676,Average,1.0,Bowler,32.291896546180396,False,False
+625371,43.022003,43.022003,1,All-rounder, HH Pandya           ,0.6411357,11.159459459459459,20,48.64864864864865,Below Average,1.0,Allrounder,27.582941801738343,False,False
+277912,37.96319,37.96319,1,Bowler, TA Boult            ,0.7007461,10.116216216216216,23,40.54054054054054,Below Average,1.0,Bowler,26.602556776815163,False,False
