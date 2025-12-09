@@ -17,6 +17,30 @@ The pipeline automates the entire lifecycle of fantasy prediction—from web scr
 4. Orchestration & Containerization:	Apache Airflow, Docker
 5. Database:	PostgreSQL
 
+# Automated ETL Architecture
+Before feature engineering begins, Squadify establishes a robust, fully automated ETL (Extract, Transform, Load) pipeline. This infrastructure is containerized using Docker and orchestrated by Apache Airflow, ensuring data is extracted, processed, and stored automatically without manual intervention.
+
+# The Workflow
+The pipeline operates as a sequence of independent Airflow tasks:
+
+1. Extract (Automated Scraping):
+Airflow DAGs trigger custom scraping scripts to fetch raw data from multiple external sources.
+Data points include ball-by-ball commentary, match scorecards, player profiles, and venue history spanning from 2008 to the present.
+
+2. Transform (Cleaning & Standardization):
+Raw data is automatically cleaned to handle missing values and inconsistencies.
+Specific transformations are applied to standardize player names and match dates, ensuring compatibility across different data sources.
+
+3. Load (PostgreSQL Storage):
+The transformed data is individually ingested into a PostgreSQL database running in a dedicated Docker container.
+This centralized warehouse serves as the foundation for the feature engineering engine and machine learning model.
+
+# Infrastructure & Automation
+Containerization (Docker): The entire ecosystem—Airflow Scheduler, Webserver, and PostgreSQL Database—is containerized. This guarantees that the environment is reproducible and isolated; the entire pipeline spins up with a single docker-compose up command.
+
+# Orchestration (Airflow DAGs): 
+Complex dependencies are managed via Directed Acyclic Graphs (DAGs). Airflow ensures that transformation tasks only execute after extraction is successful, automatically handling scheduling and error retries.
+
 # Enhanced Feature Engineering
 The features are engineered into six strategic categories:
 1. 10 Recent Performance: Raw values (runs, wickets, fantasy points) from the last 3 matches to capture immediate form volatility.
